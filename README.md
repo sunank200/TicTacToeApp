@@ -63,6 +63,34 @@ Contributions are welcome! To contribute:
 
 Please follow Swift style guidelines, add tests for new functionality, and update this README if you introduce new features.
   
+## Static Analysis and Pre-commit Hooks
+
+We use SwiftFormat and SwiftLint to format and lint Swift code, enforced via pre-commit hooks.
+
+To set up the hooks:
+1. Install Homebrew (if not already installed):
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+2. Install SwiftFormat and SwiftLint:
+   ```bash
+   brew install swiftformat swiftlint
+   ```
+3. Install pre-commit:
+   ```bash
+   pip install pre-commit
+   ```
+4. Enable Git hooks:
+   ```bash
+   pre-commit install
+   ```
+5. To run checks on all files:
+   ```bash
+   pre-commit run --all-files
+   ```
+
+The hooks will run SwiftFormat (in lint mode) and SwiftLint on staged Swift files before each commit.
+
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.  
   
