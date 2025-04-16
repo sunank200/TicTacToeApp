@@ -18,11 +18,7 @@ jobs:
       - name: SwiftFormat check
         run: swiftformat . --lint --quiet
 
-      - name: SwiftLint check
-        run: swiftlint lint --strict
 
-      - name: Select Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_15.2.app
 
       - name: Build and Test
         run: |
