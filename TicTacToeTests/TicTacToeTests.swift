@@ -5,8 +5,8 @@
 //  Created by Ankit Chaurasia on 17/04/25.
 //
 
-import XCTest
 @testable import TicTacToe
+import XCTest
 
 final class GameViewModelTests: XCTestCase {
     var viewModel: GameViewModel!
@@ -32,11 +32,11 @@ final class GameViewModelTests: XCTestCase {
     func testMultiplayerWin() {
         viewModel.gameMode = .multiplayer
         viewModel.resetGame()
-        viewModel.makeMove(at: 0)  // X
-        viewModel.makeMove(at: 3)  // O
-        viewModel.makeMove(at: 1)  // X
-        viewModel.makeMove(at: 4)  // O
-        viewModel.makeMove(at: 2)  // X wins
+        viewModel.makeMove(at: 0) // X
+        viewModel.makeMove(at: 3) // O
+        viewModel.makeMove(at: 1) // X
+        viewModel.makeMove(at: 4) // O
+        viewModel.makeMove(at: 2) // X wins
         XCTAssertTrue(viewModel.showAlert)
         XCTAssertEqual(viewModel.alertMessage, "X wins!")
         XCTAssertEqual(viewModel.winningPattern, [0, 1, 2])
@@ -45,7 +45,7 @@ final class GameViewModelTests: XCTestCase {
     func testDraw() {
         viewModel.gameMode = .multiplayer
         viewModel.resetGame()
-        let moves = [0,1,2,4,3,5,7,6,8]
+        let moves = [0, 1, 2, 4, 3, 5, 7, 6, 8]
         for move in moves {
             viewModel.makeMove(at: move)
         }

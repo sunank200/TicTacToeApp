@@ -22,9 +22,9 @@ class GameViewModel: ObservableObject {
     @Published var winningPattern: [Int] = []
 
     private let winPatterns: [[Int]] = [
-        [0,1,2], [3,4,5], [6,7,8],
-        [0,3,6], [1,4,7], [2,5,8],
-        [0,4,8], [2,4,6]
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6],
     ]
 
     private let human: Player = .x
@@ -163,7 +163,7 @@ struct ContentView: View {
                 .padding(.bottom)
 
             LazyVGrid(columns: columns, spacing: 15) {
-                ForEach(0..<9) { index in
+                ForEach(0 ..< 9) { index in
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(lineWidth: viewModel.winningPattern.contains(index) ? 5 : 2)
