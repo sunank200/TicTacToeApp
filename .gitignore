@@ -1,0 +1,41 @@
+# Xcode
+*.xcworkspace
+!default.xcworkspace
+*.xcuserdata
+*.xcscmblueprint
+*.xccheckout
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+
+# Build generated
+build/
+DerivedData/
+*.o
+*.app
+*.swiftmodule
+*.swiftdoc
+*.dSYM
+
+# Swift Package Manager
+.build/
+Packages/
+.swiftpm/
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+
+# User settings
+.DS_Store
+*.log
+*.lock
+*.tmp
+*.swp
