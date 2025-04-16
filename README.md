@@ -33,7 +33,7 @@ This is a simple Tic Tac Toe game built with SwiftUI for iOS. It supports:
    - Press **⌘R** or go to **Product → Run**
 
 ## Screenshot
-![Game Screenshot](/Users/sunank200/Desktop/tictaktoe.png)
+![Game Screenshot](./tictaktoe.png)
 
 ## AI Logic (Minimax Algorithm)
 The Single Player mode uses a Minimax algorithm to play optimally:
